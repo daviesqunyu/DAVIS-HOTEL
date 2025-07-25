@@ -21,8 +21,8 @@ import {
   BookOnline as BookOnlineIcon,
   AttachMoney as AttachMoneyIcon,
   TrendingUp as TrendingUpIcon,
-  CheckIn as CheckInIcon,
-  CheckOut as CheckOutIcon,
+  Login as CheckInIcon,
+  Logout as CheckOutIcon,
   Person as PersonIcon
 } from '@mui/icons-material';
 import { useQuery } from 'react-query';
