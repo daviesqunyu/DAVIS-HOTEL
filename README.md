@@ -241,16 +241,40 @@ npm run install-all  # Install all dependencies
 
 ## 🚀 Deployment
 
-### Production Build
+### Quick Deployment
+Use the automated deployment script:
 ```bash
+./deploy.sh
+```
+
+This interactive script provides multiple hosting options:
+- **Netlify** (Frontend) - Free tier, great for React apps
+- **Vercel** (Full-stack) - Free tier, serverless functions
+- **Heroku** (Full-stack) - Complete application hosting
+- **Docker** (Self-hosted) - Complete control
+- **GitHub Pages** (Frontend) - Free static hosting
+
+### Manual Production Build
+```bash
+# Install all dependencies
+npm run install-all
+
 # Build the frontend
-cd client
 npm run build
 
 # The build files will be in client/build/
-# Configure your web server to serve these files
-# and proxy API requests to the backend server
 ```
+
+### Hosting Options
+
+| Platform | Type | Free Tier | Best For |
+|----------|------|-----------|----------|
+| **Netlify** | Frontend | ✅ Yes | React apps, static sites |
+| **Vercel** | Full-stack | ✅ Yes | Full-stack apps, serverless |
+| **Railway** | Full-stack | ✅ Limited | Modern alternative to Heroku |
+| **Heroku** | Full-stack | ❌ No | Complete applications |
+| **Docker** | Self-hosted | ✅ Yes | Custom deployments |
+| **GitHub Pages** | Frontend | ✅ Yes | Simple static hosting |
 
 ### Environment Variables for Production
 ```env
@@ -258,7 +282,10 @@ NODE_ENV=production
 PORT=5000
 JWT_SECRET=your-production-jwt-secret
 DB_PATH=./database/hotel.db
+UPLOAD_PATH=./uploads
 ```
+
+📖 **For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md)**
 
 ## 🤝 Contributing
 
